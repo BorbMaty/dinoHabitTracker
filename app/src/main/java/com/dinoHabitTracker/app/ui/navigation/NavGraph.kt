@@ -1,0 +1,16 @@
+package com.dinoHabitTracker.app.ui.navigation
+
+import androidx.compose.runtime.Composable
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import com.dinoHabitTracker.app.ui.screens.auth.LoginScreen
+import com.dinoHabitTracker.app.ui.screens.home.HomeScreen
+
+@Composable
+fun AppNavGraph(navController: NavHostController) {
+    NavHost(navController = navController, startDestination = "login") {
+        composable("login") { LoginScreen(navController) }
+        composable("home") { HomeScreen() } // egyszerű placeholder alább
+    }
+}
