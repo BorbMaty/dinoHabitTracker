@@ -14,7 +14,7 @@ object ApiClient {
     //  - Ha Emulatoron fut a backend a gépeden: "http://10.0.2.2:3000/"
     //  - Ha fizikai telefon + PC IP: "http://192.168.1.123:3000/"
     //  - Ha távoli szerver: "https://api.teprojekted.hu/"
-    private const val BASE_URL = "http://192.168.1.9:8080/"
+    private const val BASE_URL = "http://172.21.0.1:8080/"
 
 
     private val moshi = Moshi.Builder()

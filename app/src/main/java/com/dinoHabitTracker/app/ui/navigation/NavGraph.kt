@@ -6,11 +6,13 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.dinoHabitTracker.app.ui.screens.auth.LoginScreen
 import com.dinoHabitTracker.app.ui.screens.home.HomeScreen
+import com.dinoHabitTracker.app.ui.screens.splash.SplashScreen
 
 @Composable
 fun AppNavGraph(navController: NavHostController) {
-    NavHost(navController = navController, startDestination = "login") {
-        composable("login") { LoginScreen(navController) }
-        composable("home") { HomeScreen() } // egyszerű placeholder alább
+    NavHost(navController = navController, startDestination = "splash") {
+        composable("splash") { SplashScreen(navController) }
+        composable("login")  { LoginScreen(navController) }
+        composable("home")   { HomeScreen() }
     }
 }
