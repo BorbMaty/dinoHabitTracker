@@ -20,7 +20,7 @@ fun LoginScreen(nav: NavController, vm: LoginViewModel = viewModel()) {
             Modifier.padding(24.dp).fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text("Üdv a dínóbirodalomban!", style = MaterialTheme.typography.titleLarge)
+            Text("Üdv a dínó birodalomban 🦕!", style = MaterialTheme.typography.titleLarge)
             Spacer(Modifier.height(16.dp))
 
             OutlinedTextField(

@@ -38,10 +38,23 @@ android {
 
     buildFeatures { compose = true }
 
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+        isCoreLibraryDesugaringEnabled = true
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
 
 }
 
 dependencies {
+
+    implementation(libs.androidx.foundation)
+    implementation(libs.androidx.runtime.saveable)
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.2")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -95,4 +108,28 @@ dependencies {
     // --- Lifecycle ---
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.6")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.6")
+
+    implementation("com.google.code.gson:gson:2.10.1")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.4")
+    implementation("androidx.compose.runtime:runtime-livedata")
+    implementation("io.coil-kt:coil-compose:2.6.0")
+
+    // Compose BOM (verziókezelés egyben)
+    implementation(platform("androidx.compose:compose-bom:2024.10.00"))
+
+    // Alap Compose UI – ebben van a KeyboardOptions
+    implementation("androidx.compose.ui:ui")
+
+    // (ha még nem lenne)
+    implementation("androidx.compose.material3:material3:1.2.1")
+
+    implementation("androidx.compose.foundation:foundation")
+    implementation("androidx.compose.ui:ui-text")
+    implementation("androidx.compose.material:material-icons-extended")
+
+    implementation("androidx.compose.foundation:foundation-layout")
+    implementation("io.coil-kt:coil-compose:2.7.0")
+
 }

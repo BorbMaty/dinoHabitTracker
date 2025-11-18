@@ -10,7 +10,8 @@ import java.io.IOException
 
 class AuthRepository(context: Context) {
 
-    private val api = ApiClient.retrofit.create(AuthApi::class.java)
+    private val api = ApiClient.retrofit(context).create(AuthApi::class.java)
+
     private val tokenStore = TokenStore(context)
 
     /**
